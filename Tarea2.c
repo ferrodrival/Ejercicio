@@ -6,8 +6,12 @@ int main(){ //se agrego la función principal main
 	int i, c, tam, gan, sel1, sel2, sel3;
 
     do{
-        printf("\n¡Hola! Apreta 1 y enter para ver la lista de concursantes! o 2 para salir\n\n>>");//se corrigio posición de comillas
+        printf("\n¡Hola! ¡Apreta 1 y enter para ver la lista de concursantes! o 2 para salir:\n\n>>");//se corrigio posición de comillas, se agregaron dos puntos al final
         scanf("%i",&sel1);//se agrego el & faltante
+	while(sel1<1 || sel1>2) {
+		printf("\n¡Parece que seleccionaste un número inválido! Apreta 1 y enter para ver la lista de concursantes o 2 para salir:\n\n>>");
+        	scanf("%i",&sel1);//se agrego el & faltante
+	}
         switch(sel1){
             case 1:
             printf("\nLa lista es la siguente\n\n");
@@ -48,17 +52,17 @@ int main(){ //se agrego la función principal main
                     	}while(sel3!=1);
                     	break;
                     	case 2: 
-                    	printf("\nVolvamos al menú anterior\n");
+                    		printf("\nVolvamos al menú anterior\n");
                     	break;
                     	default:
-                    	printf("\nNo existe tal opción\n")
+                    		printf("\nNo existe tal opción\n"); //se agregó punto y coma faltante
                     	break;
                     }
                     
                 }while(sel2 != 2)
-            break;
+            		break;
             case 2:
-            printf("\nBye bye" );//faltaban comillas
+            	printf("\nBye bye" );//faltaban comillas y se agregó identación para una lectura más fácil
             break;
             default:
             printf("\nNo existe tal opción\n");

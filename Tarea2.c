@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<time.h>
 int main(){ //se agrego la función principal main
-	char *lista[]={"Nombre 1, Nombre 2, Nombre 3"}; 
+	char *lista[]={"Nombre 1, Nombre 2, Nombre 3"}; //lista de participantes
 	int i, c, tam, gan, sel1, sel2, sel3;
 
     do{
@@ -10,12 +10,12 @@ int main(){ //se agrego la función principal main
         scanf("%i",&sel1);//se agrego el & faltante
         switch(sel1){
             case 1:
-            printf("\nLa lista es la siguente\n\n");
+            printf("\nLa lista es la siguente\n\n"); //mostrar la lista
             tam = sizeof(lista)/sizeof(char*);
         	for(i=0; i < tam; i++){
         	    c=i+1;
         	    printf("==================================\n");
-            	printf(">>>No. %i - %s<<<\n",c, lista[i]);
+            	printf(">>>No. %i - %s<<<\n",c, lista[i]); //nombre del ganador
             	printf("==================================\n");
                 }
                 printf("\n¡Estos son los concursantes!\n");
